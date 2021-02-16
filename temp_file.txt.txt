@@ -1,0 +1,2 @@
+pl405 lab : software engineering lab project
+project topic : attendence system using facial recognition
