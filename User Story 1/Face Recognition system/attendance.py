@@ -23,10 +23,10 @@ class req:
     def addrec():
         if request.method == 'POST':
             mydb = mysql.connector.connect(
-                host="localhost",
-                user="root",
-                password="",
-                database="attendance_db"
+                host = "localhost",
+                user = "minaxi",
+                password = "minaxi1234",
+                database="attendence_db"
             )
 
             mycursor = mydb.cursor()
@@ -38,7 +38,7 @@ class req:
                 for row in myresult:
                     name = row[0]
                     photo = row[1]
-                    storefilepath = "C:/Users/Onkar/.spyder-py3/face_recog/images/{0}.jpg".format(str(name))
+                    storefilepath = "C:/Users/Oggy/.spyder-py3/face_recog/image/{0}.jpg".format(str(name))
                     write_file(photo,storefilepath)
         
             def write_file(data, filepath):
@@ -49,7 +49,7 @@ class req:
 
             RetreiveImages()
 
-            path = 'C:/Users/Onkar/.spyder-py3/face_recog/images'
+            path = 'C:/Users/Oggy/.spyder-py3/face_recog/image'
             imgList = []
             personNames = []
             myList = os.listdir(path)
@@ -100,6 +100,12 @@ class req:
                         cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
                         cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
                         cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+                    else:
+                        y1,x2,y2,x1 = faceLoc
+                        y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+                        cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
+                        cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
+                        cv2.putText(img,"unknown",(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
             
                 cv2.imshow('Webcam',img)
                 #cv2.waitKey(1)

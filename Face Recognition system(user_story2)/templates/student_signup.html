@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>
+    Attendance Management System
+  </title>
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/brand/favicon.png') }}" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/nucleo/css/nucleo.css') }}" type="text/css">
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='fonts/nucleo/material-icon/css/material-design-iconic-font.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/argon.css') }}" type="text/css">
+</head>
+
+<body >
+
+    <div class="main">
+
+        <!-- Sing in  Form -->
+        <section class="signup">
+            <div class="containerr">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Register</h2>
+                        <form action="{{ url_for('studentform') }}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
+                            <div class="msg">{{ msg }}</div>
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="firstname" id="firstname" placeholder="First Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Last Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pr"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="pr"  id="pr" placeholder="PR No "/>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollno"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="rollno" id="rollno" placeholder="RollNo">
+                            </div>            
+                            <div class="form-group">
+                                <label for="course"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="Course" id="course" placeholder="Course">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password"/>
+                            </div>
+                            <div>
+                              <div class="form-group">
+                                <p>Upload Photo:</p>
+                              <input type="file" id="img" name="img" accept="image/*">
+                            </div>
+                          
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="static/img/login_img/student_signup.jpg" alt="sing up image"></figure>
+                        <a href="/"
+                         class="signup-image-link">Already have an account ?login
+                       </a>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+  <footer class="py-5" id="footer-main">
+    <div class="container">
+      <div class="row align-items-center justify-content-xl-between">
+        <div class="col-xl-6">
+          <div class="copyright text-center text-xl-left text-muted">
+            &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Attendance Management System</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+ <script src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/js-cookie/js.cookie.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
+  <!-- Argon JS -->
+  <script src="{{ url_for('static', filename='js/argon.js') }}"></script>
+
+   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
